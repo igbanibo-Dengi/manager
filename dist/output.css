@@ -968,9 +968,9 @@ input:checked + .toggle-bg {
   width: 100%;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .container {
-    max-width: 640px;
+    max-width: 480px;
   }
 }
 
@@ -980,21 +980,15 @@ input:checked + .toggle-bg {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 968px) {
   .container {
-    max-width: 1024px;
+    max-width: 968px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
+    max-width: 1200px;
   }
 }
 
@@ -1332,6 +1326,10 @@ input:checked + .toggle-bg {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1430,6 +1428,12 @@ input:checked + .toggle-bg {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+.space-x-12 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(3rem * var(--tw-space-x-reverse));
+  margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .self-end {
@@ -1796,14 +1800,14 @@ input:checked + .toggle-bg {
 }
 
 body {
-  background-image: url('../img/bg-tablet-pattern.svg');
+  background-image: url('/dist/img/bg-tablet-pattern.svg');
   background-repeat: no-repeat;
   background-size: 800px;
   background-position: 90% -25%;
 }
 
 #cta {
-  background-image: url('../img/bg-simplify-section-desktop.svg');
+  background-image: url('/dist/img/bg-simplify-section-desktop.svg');
   background-repeat: no-repeat;
 }
 
@@ -1814,7 +1818,7 @@ body {
   }
 
   #cta {
-    background-image: url('../img/bg-simplify-section-mobile.svg');
+    background-image: url('/dist/img/bg-simplify-section-mobile.svg');
   }
 }
 
@@ -2077,13 +2081,17 @@ body {
   --tw-ring-color: rgb(31 41 55 / 0.7);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .sm\:h-10 {
     height: 2.5rem;
   }
 
   .sm\:h-6 {
     height: 1.5rem;
+  }
+
+  .sm\:h-8 {
+    height: 2rem;
   }
 
   .sm\:w-10 {
@@ -2096,6 +2104,12 @@ body {
 
   .sm\:w-auto {
     width: auto;
+  }
+
+  .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .sm\:self-center {
@@ -2118,6 +2132,14 @@ body {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-8 {
+    height: 2rem;
+  }
+
+  .md\:h-6 {
+    height: 1.5rem;
   }
 
   .md\:w-1\/2 {
@@ -2144,8 +2166,20 @@ body {
     align-items: flex-start;
   }
 
+  .md\:justify-normal {
+    justify-content: normal;
+  }
+
   .md\:justify-start {
     justify-content: flex-start;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
+  .md\:justify-around {
+    justify-content: space-around;
   }
 
   .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
@@ -2158,6 +2192,12 @@ body {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-x-12 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(3rem * var(--tw-space-x-reverse));
+    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:bg-transparent {
@@ -2186,5 +2226,11 @@ body {
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+}
+
+@media (min-width: 968px) {
+  .lg\:h-8 {
+    height: 2rem;
   }
 }
